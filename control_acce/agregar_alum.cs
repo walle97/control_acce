@@ -27,14 +27,14 @@ namespace control_acce
             if (c.personaRegistrada(txtnum.Text) == 0)
             {
                 DateTime fecha = datenac.Value;
-                String fecha1 = fecha.ToString("dd/MM/yyyy");
+                String fecha1 = fecha.ToString("MM/dd/yyyy");
                 MessageBox.Show(c.insertar(txtnum.Text, txtnom.Text, txtcarr.Text, fecha1, txtnumtel.Text,txtemail.Text));
                 txtnum.Text = "";
                 txtnom.Text = "";
                 txtcarr.Text = "";
                 txtnumtel.Text = "";
                 txtemail.Text = "";
-
+                
 
             }
             else

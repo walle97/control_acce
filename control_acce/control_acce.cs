@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+
 
 namespace control_acce
 {
     public partial class control_acce : Form
     {
         Conexion c = new Conexion();
+        String fechareg;
         public control_acce()
         {
             InitializeComponent();
@@ -30,9 +33,20 @@ namespace control_acce
                      txtnum.Text = "";
                      txtnom.Text = "";
                      txtcarr.Text = "";*/
-
-                    MessageBox.Show("insertar registro de entrada");
-
+                    c.cargardatos(txtnum.Text, txtnom, txtcarr);
+                    DateTime hoy = DateTime.Now;
+                    txtfechreg.Text = hoy.ToShortDateString();
+                    fechareg = hoy.ToString("MM/dd/yyyy HH:mm");
+                    txthoraent.Text = hoy.ToShortTimeString();
+                    MessageBox.Show(c.marcar_ent(txtnum.Text, txtnom.Text, txtcarr.Text, fechareg));
+                    //MessageBox.Show("insertar registro de entrada");
+                    //Thread.Sleep(8000);
+                    txtnum.Text = "";
+                    txtnom.Text = "";
+                    txtcarr.Text = "";
+                    txtfechreg.Text = "";
+                    txthoraent.Text = "";
+                    txthorasal.Text = "";
                 }
                 else
                 {

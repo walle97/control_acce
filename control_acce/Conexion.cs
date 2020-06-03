@@ -32,13 +32,13 @@ namespace control_acce
             }
         }
 
-        public string insertar(String num_ctrl1, string nombre1, string Carrera1, string fecha_nac1, string num_tel1, string email1)
+        public string insertar(string num_ctrl1, string nombre1, string Carrera1, string fecha_nac1, string num_tel1, string email1)
         {
             
             string salida = "Se agrego exitosamente";
             try
             {
-                cmd = new SqlCommand("Insert into alumnos(num_ctrl,nombre,Carrera,fecha_nac,num_tel,email) values(" + num_ctrl1+ ",'" + nombre1 + "','" + Carrera1 + "','" + fecha_nac1 + "','" + num_tel1 + "','" + email1 + "')", cn);
+                cmd = new SqlCommand("Insert into alumnos(num_ctrl,nombre,Carrera,fecha_nac,num_tel,email) values('" + num_ctrl1+ "','" + nombre1 + "','" + Carrera1 + "','" + fecha_nac1 + "','" + num_tel1 + "','" + email1 + "')", cn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -67,6 +67,7 @@ namespace control_acce
             {
                 MessageBox.Show("No se pudo consultar bien: " + ex.ToString());
             }
+            
             return contador;
         }
 
@@ -90,18 +91,18 @@ namespace control_acce
             return contador;
         }
 
-        public string marcar_ent(String num_ctrl1)
+        public void cargardatos(String num_ctrl1, TextBox txtnom, TextBox txtcarr)
         {
-            /*
-             try
+            
+            try
             {
-                cmd = new SqlCommand("Select * from Persona where Id="+id+"",cn);
+                cmd = new SqlCommand("Select * from alumnos where num_ctrl=" + num_ctrl1 + "",cn);
                 dr = cmd.ExecuteReader();
                 if(dr.Read())
                 {
-                    txtNombre.Text = dr["Nombre"].ToString();
-                    txtApellidos.Text = dr["Apellidos"].ToString();
-                    dtpFecha.Text = dr["FechaNacimiento"].ToString();
+                    txtnom.Text = dr["nombre"].ToString();
+                    txtcarr.Text = dr["Carrera"].ToString();
+                    //dtpFecha.Text = dr["FechaNacimiento"].ToString();
 
                 }
                 dr.Close();
@@ -109,12 +110,19 @@ namespace control_acce
             catch(Exception ex)
             {
                 MessageBox.Show("No se pudo llenar los campos: "+ex.ToString());
-            }*/
+            }
+            
 
+        }
+
+        public String marcar_ent(string num_ctrl1, string nombre1, string Carrera1, string fecha_reg)
+        {
+            
             string salida = "Se agrego exitosamente";
             try
             {
-                //cmd = new SqlCommand("Insert into alumnos(num_ctrl,nombre,Carrera,fecha_nac,num_tel,email) values(" + num_ctrl1 + ",'" + nombre1 + "','" + Carrera1 + "','" + fecha_nac1 + "','" + num_tel1 + "','" + email1 + "')", cn);
+                
+                cmd = new SqlCommand("Insert into registro_ent(num_ctrl,nombre,Carrera,fecha_reg) values('" + num_ctrl1 + "','" + nombre1 + "','" + Carrera1 + "','" + fecha_reg + "')", cn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -124,12 +132,13 @@ namespace control_acce
             return salida;
         }
 
-        public string Marcar_salida(int id, string nombre, string apellidos, string fecha)
+        public string Marcar_salida(int id, string nombre, string apellidos, string fecha_ent1)
         {
             string salida = "Se actualizaron los datos";
             try
             {
-                cmd = new SqlCommand("Update Persona set Nombre ='" + nombre + "' ,Apellidos='" + apellidos + "', FechaNacimiento='" + fecha + "' where Id=" + id + "", cn);
+
+                cmd = new SqlCommand("Update Persona set Nombre ='" + nombre + "' ,Apellidos='" + apellidos + "', FechaNacimiento='" + fecha_ent1 + "' where Id=" + id + "", cn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
