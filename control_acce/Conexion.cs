@@ -78,7 +78,7 @@ namespace control_acce
             {
                 DateTime hoy = DateTime.Now;
                 String fechareg = hoy.ToString("MM/dd/yyyy");
-                cmd = new SqlCommand("Select * from registro_ent where num_ctrl='" + num + "' and fecha_reg= '"+ fechareg +"' and fecha_sal IS NULL", cn);
+                cmd = new SqlCommand("select * from registro_ent where datediff(day, fecha_reg, '"+ fechareg + "') = 0 and fecha_sal IS NULL and num_ctrl='"+ num + "'", cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
@@ -134,6 +134,38 @@ namespace control_acce
             return salida;
         }
 
+        public void cargardatossal(String num_ctrl1, TextBox txtnom, TextBox txtcarr)
+        {
+
+            try
+            {
+                DateTime hoy = DateTime.Now;
+                String fechareg = hoy.ToString("MM/dd/yyyy");
+                cmd = new SqlCommand("select * from registro_ent where datediff(day, fecha_reg, '" + fechareg + "') = 0 and fecha_sal IS NULL and num_ctrl='" + num_ctrl1 + "'", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    String fecha_reg2= dr["fecha_reg"].ToString();
+                    
+                    //fechareg = hoy.ToString("MM/dd/yyyy HH:mm");
+                    //txthoraent.Text = hoy.ToShortTimeString();
+
+                    txtnom.Text = dr["nombre"].ToString();
+                    txtcarr.Text = dr["Carrera"].ToString();
+                    txtnom.Text = dr["nombre"].ToString();
+                    txtnom.Text = dr["nombre"].ToString();
+                    //dtpFecha.Text = dr["FechaNacimiento"].ToString();
+
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar los campos: " + ex.ToString());
+            }
+
+
+        }
         public string Marcar_salida(int id, string nombre, string apellidos, string fecha_ent1)
         {
             string salida = "Se actualizaron los datos";
