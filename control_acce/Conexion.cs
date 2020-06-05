@@ -76,7 +76,9 @@ namespace control_acce
             int contador = 0;
             try
             {
-                cmd = new SqlCommand("Select * from registro_ent where num_ctrl=" + num + "", cn);
+                DateTime hoy = DateTime.Now;
+                String fechareg = hoy.ToString("MM/dd/yyyy");
+                cmd = new SqlCommand("Select * from registro_ent where num_ctrl='" + num + "' and fecha_reg= '"+ fechareg +"' and fecha_sal IS NULL", cn);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
