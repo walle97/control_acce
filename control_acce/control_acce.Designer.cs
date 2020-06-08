@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txthorasal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.idreg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -150,11 +151,22 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Hora de salida:";
             // 
+            // idreg
+            // 
+            this.idreg.AutoSize = true;
+            this.idreg.Location = new System.Drawing.Point(418, 34);
+            this.idreg.Name = "idreg";
+            this.idreg.Size = new System.Drawing.Size(35, 13);
+            this.idreg.TabIndex = 12;
+            this.idreg.Text = "label7";
+            this.idreg.Visible = false;
+            // 
             // control_acce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 469);
+            this.Controls.Add(this.idreg);
             this.Controls.Add(this.txthorasal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txthoraent);
@@ -188,5 +200,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txthorasal;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label idreg;
     }
 }
