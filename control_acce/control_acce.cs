@@ -50,7 +50,20 @@ namespace control_acce
                 }
                 else
                 {
-                    MessageBox.Show("Imposible de regitrar, El registro ya existe");
+                    
+                    c.cargardatossal(txtnum.Text, txtnom, txtcarr, txtfechreg, txthoraent);
+                    DateTime hoy = DateTime.Now;
+                    //txtfechreg.Text = hoy.ToShortDateString();
+                    fechareg = hoy.ToString("MM/dd/yyyy HH:mm");
+                    txthorasal.Text = hoy.ToShortTimeString();
+                    MessageBox.Show("marcar salida");
+
+                    txtnum.Text = "";
+                    txtnom.Text = "";
+                    txtcarr.Text = "";
+                    txtfechreg.Text = "";
+                    txthoraent.Text = "";
+                    txthorasal.Text = "";
                 }
             }
 

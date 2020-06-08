@@ -110,6 +110,7 @@ namespace control_acce
 
         private void BtnCtrlAcc_Click(object sender, EventArgs e)
         {
+            //this.Close();
             AbrirFormulario<control_acce>();  
             btnCtrlAcc.BackColor = Color.FromArgb(12, 61, 92);
             btnAgregarAlu.BackColor = Color.FromArgb(4, 41, 68);
@@ -118,6 +119,7 @@ namespace control_acce
 
         private void BtnAgregarAlu_Click(object sender, EventArgs e)
         {
+            //this.Close();
             AbrirFormulario<agregar_alum>();
             btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
             btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
@@ -126,6 +128,7 @@ namespace control_acce
 
         private void BtnAdminlogin_Click(object sender, EventArgs e)
         {
+            //this.Close();
             AbrirFormulario<login>();
             btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
             btnAgregarAlu.BackColor = Color.FromArgb(4, 41, 68);

@@ -134,27 +134,27 @@ namespace control_acce
             return salida;
         }
 
-        public void cargardatossal(String num_ctrl1, TextBox txtnom, TextBox txtcarr)
+        public void cargardatossal(String num_ctrl1, TextBox txtnom, TextBox txtcarr, TextBox txtfechreg, TextBox txthoraent)
         {
 
             try
             {
                 DateTime hoy = DateTime.Now;
                 String fechareg = hoy.ToString("MM/dd/yyyy");
-                cmd = new SqlCommand("select * from registro_ent where datediff(day, fecha_reg, '" + fechareg + "') = 0 and fecha_sal IS NULL and num_ctrl='" + num_ctrl1 + "'", cn);
+                cmd = new SqlCommand("select num_ctrl,nombre,CONVERT(CHAR(10), fecha_reg,103) AS Fecha,RIGHT((fecha_reg),7) as Hora,Carrera from registro_ent where datediff(day, fecha_reg, '" + fechareg + "') = 0 and fecha_sal IS NULL and num_ctrl='" + num_ctrl1 + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    String fecha_reg2= dr["fecha_reg"].ToString();
+                    //String fecha_reg2= dr["fecha_reg"].ToString();
                     
                     //fechareg = hoy.ToString("MM/dd/yyyy HH:mm");
                     //txthoraent.Text = hoy.ToShortTimeString();
 
                     txtnom.Text = dr["nombre"].ToString();
                     txtcarr.Text = dr["Carrera"].ToString();
-                    txtnom.Text = dr["nombre"].ToString();
-                    txtnom.Text = dr["nombre"].ToString();
-                    //dtpFecha.Text = dr["FechaNacimiento"].ToString();
+                    txtfechreg.Text = dr["Fecha"].ToString();
+                    txthoraent.Text = dr["Hora"].ToString();
+                                       
 
                 }
                 dr.Close();
