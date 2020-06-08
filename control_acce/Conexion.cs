@@ -120,7 +120,7 @@ namespace control_acce
         public String marcar_ent(string num_ctrl1, string nombre1, string Carrera1, string fecha_reg)
         {
             
-            string salida = "Se agrego exitosamente";
+            string salida = "Se registro entrada";
             try
             {
                 
@@ -134,14 +134,14 @@ namespace control_acce
             return salida;
         }
 
-        public void cargardatossal(String num_ctrl1, TextBox txtnom, TextBox txtcarr, TextBox txtfechreg, TextBox txthoraent)
+        public void cargardatossal(String num_ctrl1, TextBox txtnom, TextBox txtcarr, TextBox txtfechreg, TextBox txthoraent,Label idreg)
         {
 
             try
             {
                 DateTime hoy = DateTime.Now;
                 String fechareg = hoy.ToString("MM/dd/yyyy");
-                cmd = new SqlCommand("select num_ctrl,nombre,CONVERT(CHAR(10), fecha_reg,103) AS Fecha,RIGHT((fecha_reg),7) as Hora,Carrera from registro_ent where datediff(day, fecha_reg, '" + fechareg + "') = 0 and fecha_sal IS NULL and num_ctrl='" + num_ctrl1 + "'", cn);
+                cmd = new SqlCommand("select id_reg,num_ctrl,nombre,CONVERT(CHAR(10), fecha_reg,103) AS Fecha,RIGHT((fecha_reg),7) as Hora,Carrera from registro_ent where datediff(day, fecha_reg, '" + fechareg + "') = 0 and fecha_sal IS NULL and num_ctrl='" + num_ctrl1 + "'", cn);
                 dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
@@ -149,7 +149,7 @@ namespace control_acce
                     
                     //fechareg = hoy.ToString("MM/dd/yyyy HH:mm");
                     //txthoraent.Text = hoy.ToShortTimeString();
-
+                    idreg.Text = dr["id_reg"].ToString();
                     txtnom.Text = dr["nombre"].ToString();
                     txtcarr.Text = dr["Carrera"].ToString();
                     txtfechreg.Text = dr["Fecha"].ToString();
@@ -166,13 +166,13 @@ namespace control_acce
 
 
         }
-        public string Marcar_salida(int id, string nombre, string apellidos, string fecha_ent1)
+        public string Marcar_salida(string id, string fecha_sal1)
         {
-            string salida = "Se actualizaron los datos";
+            string salida = "Se registro salida";
             try
             {
 
-                cmd = new SqlCommand("Update Persona set Nombre ='" + nombre + "' ,Apellidos='" + apellidos + "', FechaNacimiento='" + fecha_ent1 + "' where Id=" + id + "", cn);
+                cmd = new SqlCommand("Update registro_ent set fecha_sal ='" + fecha_sal1 + "' where Id_reg=" + id + "", cn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)

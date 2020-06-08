@@ -15,7 +15,7 @@ namespace control_acce
     public partial class control_acce : Form
     {
         Conexion c = new Conexion();
-        String fechareg;
+        String fechareg, fechasal;
         public control_acce()
         {
             InitializeComponent();
@@ -23,9 +23,15 @@ namespace control_acce
 
         private void Txtnum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter)) {
-
-                if (c.rev_registro(txtnum.Text) == 0)
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (c.personaRegistrada(txtnum.Text) == 0)
+                {
+                    MessageBox.Show("Alumno no registrado");
+                    txtnum.Text = "";
+                }
+                else { 
+                    if (c.rev_registro(txtnum.Text) == 0)
                 {
                     // DateTime fecha = datenac.Value;
                     //String fecha1 = fecha.ToString("dd/MM/yyyy");
@@ -50,14 +56,15 @@ namespace control_acce
                 }
                 else
                 {
-                    
-                    c.cargardatossal(txtnum.Text, txtnom, txtcarr, txtfechreg, txthoraent);
+
+                    c.cargardatossal(txtnum.Text, txtnom, txtcarr, txtfechreg, txthoraent,idreg);
                     DateTime hoy = DateTime.Now;
                     //txtfechreg.Text = hoy.ToShortDateString();
-                    fechareg = hoy.ToString("MM/dd/yyyy HH:mm");
+                    fechasal = hoy.ToString("MM/dd/yyyy HH:mm");
                     txthorasal.Text = hoy.ToShortTimeString();
-                    MessageBox.Show("marcar salida");
-
+                    //MessageBox.Show("marcar salida");
+                     MessageBox.Show(c.Marcar_salida(idreg.Text, fechasal));
+                    idreg.Text = "";
                     txtnum.Text = "";
                     txtnom.Text = "";
                     txtcarr.Text = "";
@@ -66,7 +73,7 @@ namespace control_acce
                     txthorasal.Text = "";
                 }
             }
-
+        }
             
         }
     }
