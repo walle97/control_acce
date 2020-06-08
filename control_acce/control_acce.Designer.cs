@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(259, 126);
+            this.label1.Location = new System.Drawing.Point(236, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 15);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // txtnum
             // 
-            this.txtnum.Location = new System.Drawing.Point(387, 121);
+            this.txtnum.Location = new System.Drawing.Point(364, 155);
             this.txtnum.Name = "txtnum";
             this.txtnum.Size = new System.Drawing.Size(236, 20);
             this.txtnum.TabIndex = 1;
@@ -65,7 +65,7 @@
             // txtnom
             // 
             this.txtnom.Enabled = false;
-            this.txtnom.Location = new System.Drawing.Point(387, 159);
+            this.txtnom.Location = new System.Drawing.Point(364, 193);
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(236, 20);
             this.txtnom.TabIndex = 3;
@@ -74,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(319, 164);
+            this.label2.Location = new System.Drawing.Point(296, 198);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 15);
             this.label2.TabIndex = 2;
@@ -83,7 +83,7 @@
             // txtcarr
             // 
             this.txtcarr.Enabled = false;
-            this.txtcarr.Location = new System.Drawing.Point(387, 202);
+            this.txtcarr.Location = new System.Drawing.Point(364, 236);
             this.txtcarr.Name = "txtcarr";
             this.txtcarr.Size = new System.Drawing.Size(236, 20);
             this.txtcarr.TabIndex = 5;
@@ -92,7 +92,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(326, 207);
+            this.label3.Location = new System.Drawing.Point(303, 241);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 4;
@@ -101,7 +101,7 @@
             // txtfechreg
             // 
             this.txtfechreg.Enabled = false;
-            this.txtfechreg.Location = new System.Drawing.Point(387, 240);
+            this.txtfechreg.Location = new System.Drawing.Point(364, 274);
             this.txtfechreg.Name = "txtfechreg";
             this.txtfechreg.Size = new System.Drawing.Size(236, 20);
             this.txtfechreg.TabIndex = 7;
@@ -110,7 +110,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(258, 245);
+            this.label4.Location = new System.Drawing.Point(235, 279);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(123, 15);
             this.label4.TabIndex = 6;
@@ -119,7 +119,7 @@
             // txthoraent
             // 
             this.txthoraent.Enabled = false;
-            this.txthoraent.Location = new System.Drawing.Point(387, 276);
+            this.txthoraent.Location = new System.Drawing.Point(364, 310);
             this.txthoraent.Name = "txthoraent";
             this.txthoraent.Size = new System.Drawing.Size(236, 20);
             this.txthoraent.TabIndex = 9;
@@ -128,7 +128,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(266, 281);
+            this.label5.Location = new System.Drawing.Point(243, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 8;
@@ -137,7 +137,7 @@
             // txthorasal
             // 
             this.txthorasal.Enabled = false;
-            this.txthorasal.Location = new System.Drawing.Point(387, 315);
+            this.txthorasal.Location = new System.Drawing.Point(364, 349);
             this.txthorasal.Name = "txthorasal";
             this.txthorasal.Size = new System.Drawing.Size(236, 20);
             this.txthorasal.TabIndex = 11;
@@ -146,7 +146,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(276, 320);
+            this.label6.Location = new System.Drawing.Point(253, 354);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 15);
             this.label6.TabIndex = 10;
@@ -167,7 +167,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(315, 42);
+            this.label7.Location = new System.Drawing.Point(292, 76);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(291, 39);
             this.label7.TabIndex = 13;
