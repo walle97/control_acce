@@ -1,6 +1,6 @@
 ﻿namespace control_acce
 {
-    partial class login
+    partial class alumnos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(alumnos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DgvPersonas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersonas)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -51,7 +50,7 @@
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(164, 80);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 18;
+            this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox1
@@ -61,7 +60,7 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(80, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
             // label7
@@ -69,88 +68,65 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(314, 111);
+            this.label7.Location = new System.Drawing.Point(247, 111);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(217, 39);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Iniciar sesion";
+            this.label7.Size = new System.Drawing.Size(341, 39);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Alumnos Registrados";
             // 
-            // txtpass
+            // DgvPersonas
             // 
-            this.txtpass.Location = new System.Drawing.Point(344, 205);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(236, 20);
-            this.txtpass.TabIndex = 22;
+            this.DgvPersonas.AllowUserToAddRows = false;
+            this.DgvPersonas.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvPersonas.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvPersonas.Location = new System.Drawing.Point(44, 215);
+            this.DgvPersonas.Name = "DgvPersonas";
+            this.DgvPersonas.RowHeadersVisible = false;
+            this.DgvPersonas.Size = new System.Drawing.Size(714, 276);
+            this.DgvPersonas.TabIndex = 19;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(254, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 15);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Contraseña:";
-            // 
-            // txtuser
-            // 
-            this.txtuser.Location = new System.Drawing.Point(344, 167);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(236, 20);
-            this.txtuser.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(277, 167);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 15);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Usuario:";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(505, 253);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Iniciar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // login
+            // alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(807, 610);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtuser);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DgvPersonas);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "login";
-            this.Text = "login";
+            this.Name = "alumnos";
+            this.Text = "alumnos";
+            this.Load += new System.EventHandler(this.Alumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvPersonas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView DgvPersonas;
     }
 }

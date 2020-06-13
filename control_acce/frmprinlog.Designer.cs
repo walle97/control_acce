@@ -1,6 +1,6 @@
 ﻿namespace control_acce
 {
-    partial class frmprincipal
+    partial class frmprinlog
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmprincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmprinlog));
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,16 +49,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btncerrarse = new System.Windows.Forms.Button();
-            this.btnini = new System.Windows.Forms.Button();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.lblpass = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.lbluser = new System.Windows.Forms.Label();
-            this.btnreg = new System.Windows.Forms.Button();
-            this.btnalum = new System.Windows.Forms.Button();
-            this.btnrepo = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -104,13 +94,12 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(34, 82);
+            this.label5.Location = new System.Drawing.Point(300, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(748, 117);
+            this.label5.Size = new System.Drawing.Size(251, 117);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Bienvenido@s\r\nal\r\nSistema de Control de Accesos Bibliotecarios";
+            this.label5.Text = "Bienvenido@s\r\nal\r\nadmin";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox4
             // 
@@ -162,20 +151,10 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.panelMenu.Controls.Add(this.label6);
-            this.panelMenu.Controls.Add(this.btnini);
-            this.panelMenu.Controls.Add(this.btncerrarse);
-            this.panelMenu.Controls.Add(this.btnrepo);
-            this.panelMenu.Controls.Add(this.btnalum);
-            this.panelMenu.Controls.Add(this.txtpass);
-            this.panelMenu.Controls.Add(this.btnreg);
             this.panelMenu.Controls.Add(this.pictureBox3);
-            this.panelMenu.Controls.Add(this.lblpass);
             this.panelMenu.Controls.Add(this.label4);
             this.panelMenu.Controls.Add(this.label3);
-            this.panelMenu.Controls.Add(this.lbluser);
             this.panelMenu.Controls.Add(this.label1);
-            this.panelMenu.Controls.Add(this.txtuser);
             this.panelMenu.Controls.Add(this.btnAdminlogin);
             this.panelMenu.Controls.Add(this.btnAgregarAlu);
             this.panelMenu.Controls.Add(this.btnCtrlAcc);
@@ -242,7 +221,6 @@
             this.btnAdminlogin.TabIndex = 2;
             this.btnAdminlogin.Text = "Acceder como administrador";
             this.btnAdminlogin.UseVisualStyleBackColor = true;
-            this.btnAdminlogin.Visible = false;
             this.btnAdminlogin.Click += new System.EventHandler(this.BtnAdminlogin_Click);
             // 
             // btnAgregarAlu
@@ -341,136 +319,7 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
-            // btncerrarse
-            // 
-            this.btncerrarse.FlatAppearance.BorderSize = 0;
-            this.btncerrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btncerrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btncerrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncerrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrarse.ForeColor = System.Drawing.Color.White;
-            this.btncerrarse.Location = new System.Drawing.Point(5, 387);
-            this.btncerrarse.Name = "btncerrarse";
-            this.btncerrarse.Size = new System.Drawing.Size(191, 39);
-            this.btncerrarse.TabIndex = 9;
-            this.btncerrarse.Text = "Cerrar session";
-            this.btncerrarse.UseVisualStyleBackColor = true;
-            this.btncerrarse.Visible = false;
-            this.btncerrarse.Click += new System.EventHandler(this.Btncerrarse_Click);
-            // 
-            // btnini
-            // 
-            this.btnini.Location = new System.Drawing.Point(119, 333);
-            this.btnini.Name = "btnini";
-            this.btnini.Size = new System.Drawing.Size(75, 23);
-            this.btnini.TabIndex = 28;
-            this.btnini.Text = "Iniciar";
-            this.btnini.UseVisualStyleBackColor = true;
-            this.btnini.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // txtpass
-            // 
-            this.txtpass.Location = new System.Drawing.Point(96, 307);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(98, 20);
-            this.txtpass.TabIndex = 27;
-            this.txtpass.TextChanged += new System.EventHandler(this.Txtpass_TextChanged);
-            // 
-            // lblpass
-            // 
-            this.lblpass.AutoSize = true;
-            this.lblpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblpass.Location = new System.Drawing.Point(6, 308);
-            this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(84, 15);
-            this.lblpass.TabIndex = 26;
-            this.lblpass.Text = "Contraseña:";
-            this.lblpass.Click += new System.EventHandler(this.Lblpass_Click);
-            // 
-            // txtuser
-            // 
-            this.txtuser.Location = new System.Drawing.Point(96, 269);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(98, 20);
-            this.txtuser.TabIndex = 25;
-            this.txtuser.TextChanged += new System.EventHandler(this.Txtuser_TextChanged);
-            // 
-            // lbluser
-            // 
-            this.lbluser.AutoSize = true;
-            this.lbluser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluser.ForeColor = System.Drawing.Color.White;
-            this.lbluser.Location = new System.Drawing.Point(29, 269);
-            this.lbluser.Name = "lbluser";
-            this.lbluser.Size = new System.Drawing.Size(61, 15);
-            this.lbluser.TabIndex = 24;
-            this.lbluser.Text = "Usuario:";
-            this.lbluser.Click += new System.EventHandler(this.Lbluser_Click);
-            // 
-            // btnreg
-            // 
-            this.btnreg.FlatAppearance.BorderSize = 0;
-            this.btnreg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnreg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnreg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreg.ForeColor = System.Drawing.Color.White;
-            this.btnreg.Location = new System.Drawing.Point(5, 230);
-            this.btnreg.Name = "btnreg";
-            this.btnreg.Size = new System.Drawing.Size(191, 39);
-            this.btnreg.TabIndex = 6;
-            this.btnreg.Text = "Registros";
-            this.btnreg.UseVisualStyleBackColor = true;
-            this.btnreg.Visible = false;
-            this.btnreg.Click += new System.EventHandler(this.Btnreg_Click);
-            // 
-            // btnalum
-            // 
-            this.btnalum.FlatAppearance.BorderSize = 0;
-            this.btnalum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnalum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnalum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnalum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnalum.ForeColor = System.Drawing.Color.White;
-            this.btnalum.Location = new System.Drawing.Point(5, 282);
-            this.btnalum.Name = "btnalum";
-            this.btnalum.Size = new System.Drawing.Size(191, 39);
-            this.btnalum.TabIndex = 7;
-            this.btnalum.Text = "Alumnos";
-            this.btnalum.UseVisualStyleBackColor = true;
-            this.btnalum.Visible = false;
-            this.btnalum.Click += new System.EventHandler(this.Btnalum_Click);
-            // 
-            // btnrepo
-            // 
-            this.btnrepo.FlatAppearance.BorderSize = 0;
-            this.btnrepo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnrepo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnrepo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrepo.ForeColor = System.Drawing.Color.White;
-            this.btnrepo.Location = new System.Drawing.Point(5, 331);
-            this.btnrepo.Name = "btnrepo";
-            this.btnrepo.Size = new System.Drawing.Size(191, 39);
-            this.btnrepo.TabIndex = 8;
-            this.btnrepo.Text = "Reportes";
-            this.btnrepo.UseVisualStyleBackColor = true;
-            this.btnrepo.Visible = false;
-            this.btnrepo.Click += new System.EventHandler(this.Btnrepo_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(45, 241);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 15);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "iniciar como admin";
-            // 
-            // frmprincipal
+            // frmprinlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -478,7 +327,7 @@
             this.Controls.Add(this.panelContenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(650, 650);
-            this.Name = "frmprincipal";
+            this.Name = "frmprinlog";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -503,7 +352,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panelBarraTitulo;
+        private System.Windows.Forms.Panel panelFormularios;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnCerrar;
@@ -520,18 +371,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Button btncerrarse;
-        public System.Windows.Forms.Panel panelMenu;
-        public System.Windows.Forms.Panel panelFormularios;
-        private System.Windows.Forms.Button btnini;
-        private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Label lblpass;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label lbluser;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.Button btnrepo;
-        public System.Windows.Forms.Button btnalum;
-        public System.Windows.Forms.Button btnreg;
     }
 }
 

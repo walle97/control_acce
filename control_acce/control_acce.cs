@@ -21,6 +21,11 @@ namespace control_acce
             InitializeComponent();
         }
 
+        private void Txtnum_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void Txtnum_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))

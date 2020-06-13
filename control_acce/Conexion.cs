@@ -16,6 +16,8 @@ namespace control_acce
         SqlConnection cn;
         SqlCommand cmd;
         SqlDataReader dr;
+        SqlDataAdapter da;
+        DataTable dt;
 
         public Conexion()
         {
@@ -182,6 +184,64 @@ namespace control_acce
             return salida;
         }
 
+
+        public int inise(string usuario1,string password1 )
+        {
+            int contador = 0;
+            try
+            {
+               // DateTime hoy = DateTime.Now;
+                //String fechareg = hoy.ToString("MM/dd/yyyy");
+                cmd = new SqlCommand("select * from usuarios where usuario='" + usuario1 + "' and password='" + password1 + "'", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    contador++;
+                }
+                dr.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo consultar bien: " + ex.ToString());
+            }
+            return contador;
+        }
+
+        public void cargaralumnos(DataGridView dgv)
+        {
+
+            try
+            {
+                da = new SqlDataAdapter("Select * from alumnos", cn);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar el Datagridview: " + ex.ToString());
+            }
+
+
+        }
+
+        public void cargarregistro(DataGridView dgv)
+        {
+
+            try
+            {
+                da = new SqlDataAdapter("Select * from registro_ent", cn);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo llenar el Datagridview: " + ex.ToString());
+            }
+
+
+        }
 
     }
 }

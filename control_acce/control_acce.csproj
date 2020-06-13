@@ -55,12 +55,24 @@
     <Compile Include="agregar_alum.Designer.cs">
       <DependentUpon>agregar_alum.cs</DependentUpon>
     </Compile>
+    <Compile Include="alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumnos.Designer.cs">
+      <DependentUpon>alumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
     <Compile Include="control_acce.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="control_acce.Designer.cs">
       <DependentUpon>control_acce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmprinlog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmprinlog.Designer.cs">
+      <DependentUpon>frmprinlog.cs</DependentUpon>
     </Compile>
     <Compile Include="frmprincipal.cs">
       <SubType>Form</SubType>
@@ -76,11 +88,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registros.Designer.cs">
+      <DependentUpon>registros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes.Designer.cs">
+      <DependentUpon>reportes.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="agregar_alum.resx">
       <DependentUpon>agregar_alum.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="alumnos.resx">
+      <DependentUpon>alumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control_acce.resx">
       <DependentUpon>control_acce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmprinlog.resx">
+      <DependentUpon>frmprinlog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmprincipal.resx">
       <DependentUpon>frmprincipal.cs</DependentUpon>
@@ -97,6 +127,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registros.resx">
+      <DependentUpon>registros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes.resx">
+      <DependentUpon>reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

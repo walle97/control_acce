@@ -11,55 +11,14 @@ using System.Windows.Forms;
 
 namespace control_acce
 {
-    
-    public partial class frmprincipal : Form
+    public partial class frmprinlog : Form
     {
-        Conexion c = new Conexion();
-        public frmprincipal()
+        public frmprinlog()
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             this.DoubleBuffered = true;
-            txtpass.PasswordChar = '*';
-
-
-
         }
-
-        public void activarbtn()
-        {
-            btnreg.Visible = true;
-            btnalum.Visible = true;
-            btnrepo.Visible = true;
-            btncerrarse.Visible = true;
-            //btnAdminlogin.Visible = false;
-            txtuser.Visible = false;
-            txtpass.Visible = false;
-            lbluser.Visible = false;
-            lblpass.Visible = false;
-            btnini.Visible = false;
-            label6.Visible = false;
-
-
-
-
-        }
-
-        public void desbtn()
-        {
-            btnreg.Visible = false;
-            btnalum.Visible = false;
-            btnrepo.Visible = false;
-            btncerrarse.Visible = false;
-            //btnAdminlogin.Visible = true;
-            txtuser.Visible = true;
-            txtpass.Visible = true;
-            lbluser.Visible = true;
-            lblpass.Visible = true;
-            btnini.Visible = true;
-            label6.Visible = true;
-        }
-
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
         private int tolerance = 12;
         private const int WM_NCHITTEST = 132;
@@ -81,10 +40,7 @@ namespace control_acce
                     break;
             }
         }
-
-        
-
-        
+        //----------------DIBUJAR RECTANGULO / EXCLUIR ESQUINA PANEL 
         protected override void OnSizeChanged(EventArgs e)
         {
             base.OnSizeChanged(e);
@@ -179,94 +135,7 @@ namespace control_acce
             btnAdminlogin.BackColor = Color.FromArgb(12, 61, 92);
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btncerrarse_Click(object sender, EventArgs e)
-        {
-            desbtn();
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            if (c.inise(txtuser.Text, txtpass.Text) == 0)
-            {
-                //DateTime fecha = datenac.Value;
-                //String fecha1 = fecha.ToString("MM/dd/yyyy");
-                //MessageBox.Show(c.insertar(txtnum.Text, txtnom.Text, txtcarr.Text, fecha1, txtnumtel.Text, txtemail.Text));
-                //txtnum.Text = "";
-                //txtnom.Text = "";
-                //frmprinlog mv = new frmprinlog();
-                //mv.Show();
-
-
-                MessageBox.Show("Usuario o password incorrecto");
-                txtuser.Text = "";
-                txtpass.Text = "";
-
-
-            }
-            else
-            {
-
-                frmprincipal pri = new frmprincipal();
-                activarbtn();
-                txtuser.Text = "";
-                txtpass.Text = "";
-
-                //this.Close();         
-
-
-
-
-            }
-        }
-
-        private void Txtuser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Lblpass_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Txtpass_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Lbluser_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Btnreg_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<registros>();
-            btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
-            btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
-            btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
-        }
-
-        private void Btnalum_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<alumnos>();
-            btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
-            btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
-            btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
-        }
-
-        private void Btnrepo_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<reportes>();
-            btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
-            btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
-            btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
-        }
+        
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
