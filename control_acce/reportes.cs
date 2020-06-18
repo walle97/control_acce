@@ -16,5 +16,11 @@ namespace control_acce
         {
             InitializeComponent();
         }
+
+        private void Reportes_Load(object sender, EventArgs e)
+        {
+
+            
+        }
     }
 }

@@ -37,10 +37,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnini = new System.Windows.Forms.Button();
+            this.btncerrarse = new System.Windows.Forms.Button();
+            this.btnrepo = new System.Windows.Forms.Button();
+            this.btnalum = new System.Windows.Forms.Button();
+            this.txtpass = new System.Windows.Forms.TextBox();
+            this.btnreg = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblpass = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbluser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtuser = new System.Windows.Forms.TextBox();
             this.btnAdminlogin = new System.Windows.Forms.Button();
             this.btnAgregarAlu = new System.Windows.Forms.Button();
             this.btnCtrlAcc = new System.Windows.Forms.Button();
@@ -49,16 +59,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btncerrarse = new System.Windows.Forms.Button();
-            this.btnini = new System.Windows.Forms.Button();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.lblpass = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.lbluser = new System.Windows.Forms.Label();
-            this.btnreg = new System.Windows.Forms.Button();
-            this.btnalum = new System.Windows.Forms.Button();
-            this.btnrepo = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.panelContenedor.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -185,6 +185,103 @@
             this.panelMenu.Size = new System.Drawing.Size(200, 610);
             this.panelMenu.TabIndex = 1;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(45, 241);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 15);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "iniciar como admin";
+            // 
+            // btnini
+            // 
+            this.btnini.Location = new System.Drawing.Point(119, 333);
+            this.btnini.Name = "btnini";
+            this.btnini.Size = new System.Drawing.Size(75, 23);
+            this.btnini.TabIndex = 28;
+            this.btnini.Text = "Iniciar";
+            this.btnini.UseVisualStyleBackColor = true;
+            this.btnini.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // btncerrarse
+            // 
+            this.btncerrarse.FlatAppearance.BorderSize = 0;
+            this.btncerrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btncerrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btncerrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncerrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncerrarse.ForeColor = System.Drawing.Color.White;
+            this.btncerrarse.Location = new System.Drawing.Point(5, 337);
+            this.btncerrarse.Name = "btncerrarse";
+            this.btncerrarse.Size = new System.Drawing.Size(191, 39);
+            this.btncerrarse.TabIndex = 9;
+            this.btncerrarse.Text = "Cerrar session";
+            this.btncerrarse.UseVisualStyleBackColor = true;
+            this.btncerrarse.Visible = false;
+            this.btncerrarse.Click += new System.EventHandler(this.Btncerrarse_Click);
+            // 
+            // btnrepo
+            // 
+            this.btnrepo.FlatAppearance.BorderSize = 0;
+            this.btnrepo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnrepo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnrepo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnrepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrepo.ForeColor = System.Drawing.Color.White;
+            this.btnrepo.Location = new System.Drawing.Point(5, 331);
+            this.btnrepo.Name = "btnrepo";
+            this.btnrepo.Size = new System.Drawing.Size(191, 39);
+            this.btnrepo.TabIndex = 8;
+            this.btnrepo.Text = "Reportes";
+            this.btnrepo.UseVisualStyleBackColor = true;
+            this.btnrepo.Visible = false;
+            this.btnrepo.Click += new System.EventHandler(this.Btnrepo_Click);
+            // 
+            // btnalum
+            // 
+            this.btnalum.FlatAppearance.BorderSize = 0;
+            this.btnalum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnalum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnalum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnalum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnalum.ForeColor = System.Drawing.Color.White;
+            this.btnalum.Location = new System.Drawing.Point(5, 282);
+            this.btnalum.Name = "btnalum";
+            this.btnalum.Size = new System.Drawing.Size(191, 39);
+            this.btnalum.TabIndex = 7;
+            this.btnalum.Text = "Alumnos";
+            this.btnalum.UseVisualStyleBackColor = true;
+            this.btnalum.Visible = false;
+            this.btnalum.Click += new System.EventHandler(this.Btnalum_Click);
+            // 
+            // txtpass
+            // 
+            this.txtpass.Location = new System.Drawing.Point(96, 307);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(98, 20);
+            this.txtpass.TabIndex = 27;
+            this.txtpass.TextChanged += new System.EventHandler(this.Txtpass_TextChanged);
+            // 
+            // btnreg
+            // 
+            this.btnreg.FlatAppearance.BorderSize = 0;
+            this.btnreg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnreg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnreg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreg.ForeColor = System.Drawing.Color.White;
+            this.btnreg.Location = new System.Drawing.Point(5, 230);
+            this.btnreg.Name = "btnreg";
+            this.btnreg.Size = new System.Drawing.Size(191, 39);
+            this.btnreg.TabIndex = 6;
+            this.btnreg.Text = "Registros";
+            this.btnreg.UseVisualStyleBackColor = true;
+            this.btnreg.Visible = false;
+            this.btnreg.Click += new System.EventHandler(this.Btnreg_Click);
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -194,6 +291,18 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
+            // 
+            // lblpass
+            // 
+            this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblpass.Location = new System.Drawing.Point(6, 308);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(84, 15);
+            this.lblpass.TabIndex = 26;
+            this.lblpass.Text = "Contraseña:";
+            this.lblpass.Click += new System.EventHandler(this.Lblpass_Click);
             // 
             // label4
             // 
@@ -217,6 +326,18 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "de ";
             // 
+            // lbluser
+            // 
+            this.lbluser.AutoSize = true;
+            this.lbluser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluser.ForeColor = System.Drawing.Color.White;
+            this.lbluser.Location = new System.Drawing.Point(29, 269);
+            this.lbluser.Name = "lbluser";
+            this.lbluser.Size = new System.Drawing.Size(61, 15);
+            this.lbluser.TabIndex = 24;
+            this.lbluser.Text = "Usuario:";
+            this.lbluser.Click += new System.EventHandler(this.Lbluser_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -227,6 +348,14 @@
             this.label1.Size = new System.Drawing.Size(196, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Instituto Tecnológico";
+            // 
+            // txtuser
+            // 
+            this.txtuser.Location = new System.Drawing.Point(96, 269);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(98, 20);
+            this.txtuser.TabIndex = 25;
+            this.txtuser.TextChanged += new System.EventHandler(this.Txtuser_TextChanged);
             // 
             // btnAdminlogin
             // 
@@ -340,135 +469,6 @@
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
-            // 
-            // btncerrarse
-            // 
-            this.btncerrarse.FlatAppearance.BorderSize = 0;
-            this.btncerrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btncerrarse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btncerrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncerrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncerrarse.ForeColor = System.Drawing.Color.White;
-            this.btncerrarse.Location = new System.Drawing.Point(5, 387);
-            this.btncerrarse.Name = "btncerrarse";
-            this.btncerrarse.Size = new System.Drawing.Size(191, 39);
-            this.btncerrarse.TabIndex = 9;
-            this.btncerrarse.Text = "Cerrar session";
-            this.btncerrarse.UseVisualStyleBackColor = true;
-            this.btncerrarse.Visible = false;
-            this.btncerrarse.Click += new System.EventHandler(this.Btncerrarse_Click);
-            // 
-            // btnini
-            // 
-            this.btnini.Location = new System.Drawing.Point(119, 333);
-            this.btnini.Name = "btnini";
-            this.btnini.Size = new System.Drawing.Size(75, 23);
-            this.btnini.TabIndex = 28;
-            this.btnini.Text = "Iniciar";
-            this.btnini.UseVisualStyleBackColor = true;
-            this.btnini.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // txtpass
-            // 
-            this.txtpass.Location = new System.Drawing.Point(96, 307);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(98, 20);
-            this.txtpass.TabIndex = 27;
-            this.txtpass.TextChanged += new System.EventHandler(this.Txtpass_TextChanged);
-            // 
-            // lblpass
-            // 
-            this.lblpass.AutoSize = true;
-            this.lblpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpass.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblpass.Location = new System.Drawing.Point(6, 308);
-            this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(84, 15);
-            this.lblpass.TabIndex = 26;
-            this.lblpass.Text = "Contraseña:";
-            this.lblpass.Click += new System.EventHandler(this.Lblpass_Click);
-            // 
-            // txtuser
-            // 
-            this.txtuser.Location = new System.Drawing.Point(96, 269);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(98, 20);
-            this.txtuser.TabIndex = 25;
-            this.txtuser.TextChanged += new System.EventHandler(this.Txtuser_TextChanged);
-            // 
-            // lbluser
-            // 
-            this.lbluser.AutoSize = true;
-            this.lbluser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbluser.ForeColor = System.Drawing.Color.White;
-            this.lbluser.Location = new System.Drawing.Point(29, 269);
-            this.lbluser.Name = "lbluser";
-            this.lbluser.Size = new System.Drawing.Size(61, 15);
-            this.lbluser.TabIndex = 24;
-            this.lbluser.Text = "Usuario:";
-            this.lbluser.Click += new System.EventHandler(this.Lbluser_Click);
-            // 
-            // btnreg
-            // 
-            this.btnreg.FlatAppearance.BorderSize = 0;
-            this.btnreg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnreg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnreg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreg.ForeColor = System.Drawing.Color.White;
-            this.btnreg.Location = new System.Drawing.Point(5, 230);
-            this.btnreg.Name = "btnreg";
-            this.btnreg.Size = new System.Drawing.Size(191, 39);
-            this.btnreg.TabIndex = 6;
-            this.btnreg.Text = "Registros";
-            this.btnreg.UseVisualStyleBackColor = true;
-            this.btnreg.Visible = false;
-            this.btnreg.Click += new System.EventHandler(this.Btnreg_Click);
-            // 
-            // btnalum
-            // 
-            this.btnalum.FlatAppearance.BorderSize = 0;
-            this.btnalum.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnalum.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnalum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnalum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnalum.ForeColor = System.Drawing.Color.White;
-            this.btnalum.Location = new System.Drawing.Point(5, 282);
-            this.btnalum.Name = "btnalum";
-            this.btnalum.Size = new System.Drawing.Size(191, 39);
-            this.btnalum.TabIndex = 7;
-            this.btnalum.Text = "Alumnos";
-            this.btnalum.UseVisualStyleBackColor = true;
-            this.btnalum.Visible = false;
-            this.btnalum.Click += new System.EventHandler(this.Btnalum_Click);
-            // 
-            // btnrepo
-            // 
-            this.btnrepo.FlatAppearance.BorderSize = 0;
-            this.btnrepo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnrepo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnrepo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnrepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrepo.ForeColor = System.Drawing.Color.White;
-            this.btnrepo.Location = new System.Drawing.Point(5, 331);
-            this.btnrepo.Name = "btnrepo";
-            this.btnrepo.Size = new System.Drawing.Size(191, 39);
-            this.btnrepo.TabIndex = 8;
-            this.btnrepo.Text = "Reportes";
-            this.btnrepo.UseVisualStyleBackColor = true;
-            this.btnrepo.Visible = false;
-            this.btnrepo.Click += new System.EventHandler(this.Btnrepo_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(45, 241);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 15);
-            this.label6.TabIndex = 29;
-            this.label6.Text = "iniciar como admin";
             // 
             // frmprincipal
             // 

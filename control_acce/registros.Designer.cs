@@ -35,6 +35,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DgvPersonas = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numctrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carrera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechareg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horasal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPersonas)).BeginInit();
@@ -87,6 +95,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvPersonas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPersonas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.numctrl,
+            this.nombre,
+            this.carrera,
+            this.fechareg,
+            this.horaent,
+            this.Horasal});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -101,11 +117,57 @@
             this.DgvPersonas.Size = new System.Drawing.Size(714, 276);
             this.DgvPersonas.TabIndex = 20;
             // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            // 
+            // numctrl
+            // 
+            this.numctrl.HeaderText = "Numero de control";
+            this.numctrl.Name = "numctrl";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre alumno";
+            this.nombre.Name = "nombre";
+            // 
+            // carrera
+            // 
+            this.carrera.HeaderText = "Carrera";
+            this.carrera.Name = "carrera";
+            // 
+            // fechareg
+            // 
+            this.fechareg.HeaderText = "Fecha de registro";
+            this.fechareg.Name = "fechareg";
+            // 
+            // horaent
+            // 
+            this.horaent.HeaderText = "Hora de entrada";
+            this.horaent.Name = "horaent";
+            // 
+            // Horasal
+            // 
+            this.Horasal.HeaderText = "Hora de salida";
+            this.Horasal.Name = "Horasal";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(687, 164);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Imprimir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // registros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 610);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.DgvPersonas);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox4);
@@ -128,5 +190,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView DgvPersonas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numctrl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn carrera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechareg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Horasal;
+        private System.Windows.Forms.Button button1;
     }
 }

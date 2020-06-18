@@ -30,7 +30,7 @@ namespace control_acce
         {
             btnreg.Visible = true;
             btnalum.Visible = true;
-            btnrepo.Visible = true;
+            //btnrepo.Visible = true;
             btncerrarse.Visible = true;
             //btnAdminlogin.Visible = false;
             txtuser.Visible = false;
@@ -49,7 +49,7 @@ namespace control_acce
         {
             btnreg.Visible = false;
             btnalum.Visible = false;
-            btnrepo.Visible = false;
+            //btnrepo.Visible = false;
             btncerrarse.Visible = false;
             //btnAdminlogin.Visible = true;
             txtuser.Visible = true;
@@ -159,6 +159,9 @@ namespace control_acce
             btnCtrlAcc.BackColor = Color.FromArgb(12, 61, 92);
             btnAgregarAlu.BackColor = Color.FromArgb(4, 41, 68);
             btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
+            btnalum.BackColor = Color.FromArgb(4, 41, 68);
+            btnreg.BackColor = Color.FromArgb(4, 41, 68);
+
         }
 
         private void BtnAgregarAlu_Click(object sender, EventArgs e)
@@ -168,6 +171,8 @@ namespace control_acce
             btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
             btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
             btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
+            btnalum.BackColor = Color.FromArgb(4, 41, 68);
+            btnreg.BackColor = Color.FromArgb(4, 41, 68);
         }
 
         private void BtnAdminlogin_Click(object sender, EventArgs e)
@@ -186,7 +191,9 @@ namespace control_acce
 
         private void Btncerrarse_Click(object sender, EventArgs e)
         {
+
             desbtn();
+            AbrirFormulario<control_acce>();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -248,16 +255,20 @@ namespace control_acce
         {
             AbrirFormulario<registros>();
             btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
-            btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
+            btnAgregarAlu.BackColor = Color.FromArgb(4, 41, 68);
             btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
+            btnalum.BackColor = Color.FromArgb(4, 41, 68);
+            btnreg.BackColor = Color.FromArgb(12, 61, 92);
         }
 
         private void Btnalum_Click(object sender, EventArgs e)
         {
             AbrirFormulario<alumnos>();
             btnCtrlAcc.BackColor = Color.FromArgb(4, 41, 68);
-            btnAgregarAlu.BackColor = Color.FromArgb(12, 61, 92);
+            btnAgregarAlu.BackColor = Color.FromArgb(4, 41, 68);
             btnAdminlogin.BackColor = Color.FromArgb(4, 41, 68);
+            btnalum.BackColor = Color.FromArgb(12, 61, 92);
+            btnreg.BackColor = Color.FromArgb(4, 41, 68);
         }
 
         private void Btnrepo_Click(object sender, EventArgs e)
