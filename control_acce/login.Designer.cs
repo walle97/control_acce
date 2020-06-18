@@ -73,7 +73,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 39);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Iniciar sesion";
+            this.label7.Text = "Iniciar sesión";
             // 
             // txtpass
             // 
