@@ -194,7 +194,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 15);
             this.label6.TabIndex = 29;
-            this.label6.Text = "iniciar como admin";
+            this.label6.Text = "Iniciar como admin";
             // 
             // btnini
             // 
@@ -218,7 +218,7 @@
             this.btncerrarse.Name = "btncerrarse";
             this.btncerrarse.Size = new System.Drawing.Size(191, 39);
             this.btncerrarse.TabIndex = 9;
-            this.btncerrarse.Text = "Cerrar session";
+            this.btncerrarse.Text = "Cerrar sesión";
             this.btncerrarse.UseVisualStyleBackColor = true;
             this.btncerrarse.Visible = false;
             this.btncerrarse.Click += new System.EventHandler(this.Btncerrarse_Click);

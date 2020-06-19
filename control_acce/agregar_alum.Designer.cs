@@ -64,7 +64,7 @@
             this.lblemail.Name = "lblemail";
             this.lblemail.Size = new System.Drawing.Size(129, 15);
             this.lblemail.TabIndex = 22;
-            this.lblemail.Text = "Correo electronico:";
+            this.lblemail.Text = "Correo electrónico:";
             // 
             // txtnumtel
             // 
@@ -81,7 +81,7 @@
             this.lblnumTel.Name = "lblnumTel";
             this.lblnumTel.Size = new System.Drawing.Size(138, 15);
             this.lblnumTel.TabIndex = 20;
-            this.lblnumTel.Text = "Numero de telefono:";
+            this.lblnumTel.Text = "Número de teléfono:";
             // 
             // lblfechNac
             // 
@@ -135,7 +135,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 15);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Numero de control:";
+            this.label1.Text = "Número de control:";
             // 
             // button1
             // 
