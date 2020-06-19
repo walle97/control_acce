@@ -14,5 +14,7 @@ namespace control_acce
         public string fechareg { get; set; }
         public string horaent { get; set; }
         public string horasal { get; set; }
+
+        // para demostrar git hub
     }
 }
