@@ -108,7 +108,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(748, 117);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Bienvenido@s\r\nal\r\nSistema de Control de Accesos Bibliotecarios";
+            this.label5.Text = "Bienvenidos\r\nal\r\nSistema de Control de Accesos Bibliotecarios";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
